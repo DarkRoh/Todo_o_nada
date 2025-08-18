@@ -4,18 +4,16 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 
-    /* Aquí va tu imagen */
-    background-image: url('images/NOCHE.jpg');
+    /* Fondo de la rosa */
+    background-color: #fce4ec; /* Color base */
+    background-image: url('images/NOCHE.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Opcional: si quieres un color base detrás de la imagen */
-    background-color: #fce4ec;
-
     text-align: center;
-    color: #ADD8E6; /* Color del texto si pones títulos */
 }
 
 .container {
