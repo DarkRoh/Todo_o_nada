@@ -14,7 +14,24 @@ body {
 
     text-align: center;
 }
+.mensaje {
+  position: absolute; /* Para que quede encima */
+  top: 10%; /* Baja o sube según quieras */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white; /* Texto blanco para que contraste con el fondo */
+  font-family: 'Arial', sans-serif;
+}
 
+.mensaje h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.mensaje p {
+  font-size: 1.2rem;
+}
 
 .container {
   position: absolute;
