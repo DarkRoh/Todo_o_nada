@@ -1,10 +1,13 @@
-.rosa-section {
+body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    background: url("images/NOCHE.jpg") no-repeat center center;
+    background-size: cover;
+}
 
     /* Fondo de la rosa */
     background-color: #fce4ec; /* Color base */
