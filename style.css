@@ -59,6 +59,24 @@ h1 {
     transform: translateY(-3px); /* Efecto de levitación al pasar el mouse */
 }
 
+/* Color para el botón de ANIME */
+.btn-anime {
+    background-color: #00FFFF; /* Cian */
+    color: #333333; /* Color de texto oscuro para que resalte */
+}
+
+/* Color para el botón de SERIE */
+.btn-serie {
+    background-color: #FF5733; /* Naranja rojizo */
+    color: white; /* Color de texto blanco */
+}
+
+/* Color para el botón de PELICULA */
+.btn-pelicula {
+    background-color: #FFD700; /* Dorado */
+    color: #333333; /* Color de texto oscuro para que resalte */
+}
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     h1 {
