@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0; /* Un fondo claro para que la rosa destaque */
+    background: #111; /* Fondo oscuro para destacar */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,112 +7,86 @@ body {
     margin: 0;
 }
 
-.rose-container {
-    perspective: 600px; /* Necesario para efectos 3D */
-}
-
 .rose {
     position: relative;
-    width: 100px;
+    width: 150px;
+    height: 150px;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+/* Animación de "latido" */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Pétalos con degradado */
+.petal {
+    position: absolute;
+    width: 70px;
     height: 100px;
+    background: radial-gradient(circle at top, #ff4d6d, #99001a);
+    border-radius: 50% 50% 0 0;
     transform-origin: center bottom;
-    transform: rotateX(60deg) scale(0);
-    animation: bloom 2s ease-out forwards 1s;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    opacity: 0;
+    animation: bloom 2s ease forwards;
 }
 
 @keyframes bloom {
-    to {
-        transform: rotateX(0deg) scale(1);
-    }
+    from { transform: scale(0.2) rotate(0deg); opacity: 0; }
+    to   { transform: scale(1) rotate(var(--angle)); opacity: 1; }
 }
 
-/* Estilos de los pétalos */
-.petal {
-    position: absolute;
-    width: 40px;
-    height: 60px;
-    background-color: #ff3366; /* Rojo rosado */
-    border-radius: 50% 50% 0 0;
-    transform-origin: center bottom;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
+/* Cada pétalo con su ángulo */
+.p1 { --angle: 0deg;   animation-delay: 1s; }
+.p2 { --angle: 60deg;  animation-delay: 1.2s; }
+.p3 { --angle: 120deg; animation-delay: 1.4s; }
+.p4 { --angle: 180deg; animation-delay: 1.6s; }
+.p5 { --angle: 240deg; animation-delay: 1.8s; }
+.p6 { --angle: 300deg; animation-delay: 2s; }
 
-.p1 { transform: rotate(30deg) translate(0, -10px); }
-.p2 { transform: rotate(90deg) translate(0, -10px); }
-.p3 { transform: rotate(150deg) translate(0, -10px); }
-.p4 { transform: rotate(210deg) translate(0, -10px); }
-.p5 { transform: rotate(270deg) translate(0, -10px); }
-.p6 { transform: rotate(330deg) translate(0, -10px); }
-
-/* Centro de la rosa */
+/* Centro dorado */
 .center {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-    background-color: #ffcc00; /* Amarillo para el centro */
+    top: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ffd633, #cc9900);
     border-radius: 50%;
+    z-index: 10;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Tallo */
 .stem {
     position: absolute;
-    bottom: 0;
-    left: 45%;
-    width: 10px;
-    height: 100px;
-    background-color: #228B22; /* Verde para el tallo */
+    bottom: -150px;
+    left: 70px;
+    width: 12px;
+    height: 160px;
+    background: linear-gradient(to bottom, #228b22, #145214);
 }
 
 /* Hojas */
 .leaf {
     position: absolute;
-    width: 30px;
-    height: 45px;
-    background-color: #228B22; /* Verde para las hojas */
-    border-radius: 0 70% 70% 50%;
-    transform-origin: top left;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    width: 70px;
+    height: 40px;
+    background: radial-gradient(circle at center, #2ecc71, #145214);
+    border-radius: 50% 50% 0 50%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.leaf.l1 {
-    top: 70px;
-    left: -15px;
-    transform: rotate(20deg);
-}
-
-.leaf.l2 {
-    top: 60px;
-    left: 75px;
+.l1 {
+    bottom: -80px;
+    left: -60px;
     transform: rotate(-30deg);
 }
 
-/* Animación de los pétalos abriéndose */
-.petal {
-    animation: openPetal 1.5s ease-out forwards 1.5s;
-}
-
-@keyframes openPetal {
-    to {
-        transform: rotateY(0deg) translate(0, -20px);
-        opacity: 1;
-    }
-}
-
-.p1 { animation-delay: 1.7s; }
-.p2 { animation-delay: 1.9s; }
-.p3 { animation-delay: 2.1s; }
-.p4 { animation-delay: 2.3s; }
-.p5 { animation-delay: 2.5s; }
-.p6 { animation-delay: 2.7s; }
-
-/* Ajustar el color a rojo intenso */
-.petal {
-    background-color: #ff0000; /* Rojo intenso */
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.center {
-    background-color: #fdd835; /* Un amarillo más dorado para el centro */
+.l2 {
+    bottom: -100px;
+    left: 60px;
+    transform: rotate(30deg);
 }
