@@ -1,12 +1,12 @@
-body {
-    background: #111; /* Fondo oscuro para destacar */
+/* Contenedor de la rosa centrada */
+.rose-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
 }
 
+/* Rosa */
 .rose {
     position: relative;
     width: 150px;
