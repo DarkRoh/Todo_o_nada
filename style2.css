@@ -1,5 +1,17 @@
 body {
-  overflow: hidden;
+ margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec; /* Fondo rosa claro por defecto, lo cambiaremos */
+    background-image: url('images/NOCHE.jpg'); /* Para imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #ADD8E6; /* Color de texto del título */
+    text-align: center;
 }
 
 .container {
