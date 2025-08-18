@@ -5,8 +5,14 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: url("images/NOCHE.jpg") no-repeat center center;
+
+    background-color: #fce4ec;
+    background-image: url('images/NOCHE.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
 }
 
     /* Fondo de la rosa */
