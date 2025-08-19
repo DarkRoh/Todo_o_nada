@@ -10,7 +10,7 @@ body {
     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: #ADD8E6; /* Color de texto del título */
+    color: #FFFFFF; /* Color de texto del título */
     text-align: center;
 }
 
